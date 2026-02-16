@@ -1,0 +1,506 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+  font-family:outfit;
+}
+body{
+  background:#dadada;
+  
+}
+
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+
+.top-nav{
+
+  justify-content:space-between;
+  background:#131921;
+  padding:20px 20px;
+  color:#fff;
+  text-align: center ;
+  word-spacing: 2px;
+  
+}
+.shop{
+  text-decoration: none;
+  color:white;
+  font-weight:200;
+  text-transform: capitalize;
+  
+ 
+}
+.free{
+  text-transform: uppercase;
+  text-decoration: none;
+  color:white;
+  font-weight:200;
+  font-style: italic;
+}
+.bottom-nav{
+  display: flex;
+  align-items: center ;
+  background-color: white;
+  position:relative;
+}
+
+.nav-left{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  color:black
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.bottom-section a {
+  color:black;
+  text-transform: uppercase;
+   margin-right: 20px; 
+   
+   font-weight: bold;
+  
+}
+.nav-search{
+  flex:1;
+  display:flex;
+  justify-content:center;
+  
+}
+.nav-search {
+  position: relative;
+  width: 300px;
+}
+
+.search-box {
+  width: 100%;
+  height: 40px;
+  padding: 0 40px;       /* makes space for icons */
+  border-radius: 50px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+/* icon general style */
+.icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* left icon */
+.search-icon {
+  left: 12px;
+}
+
+/* right icon */
+.camera-icon {
+  right: 12px;
+}
+.nav-right {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-item {
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.nav-item i {
+  transition: 0.3s;
+}
+
+.nav-item i:hover {
+  color: red ;
+}
+
+/* Dropdown Base */
+.nav-item {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Hide dropdown */
+.dropdown {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background: white;
+  padding: 15px;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Show when hovering */
+.nav-item:hover .dropdown {
+  display: flex;
+}
+
+
+.dropdown a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+.dropdown a:hover {
+  color:red;
+}
+
+/* Buttons */
+.shop-btn,
+.signin-btn {
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.shop-btn {
+  background: black;
+  color: white;
+}
+
+.signin-btn {
+  background: white;
+  border: 1px solid black;
+}
+.nav-item {
+  position: relative;
+}
+
+.dropdown-cart {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 500px;
+  background: white;
+  padding: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  display: none;
+}
+
+/* THIS is what makes hover work */
+.cart:hover .dropdown-cart {
+  display: block;
+}
+
+.sign-in{
+  background: white;
+  color:black;
+  padding: 8px 16px;
+
+  cursor: pointer;
+  border-radius: 10px;
+  text-decoration: none;
+  
+}
+.sign-out{
+  background: black;
+  color:white ;
+  padding : 8px 16px;
+  
+  cursor: pointer;
+  border-radius: 4px;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+
+.nav-account {
+  position: relative;
+  display: inline-block; /* Ensures the hover area matches the element size */
+}
+
+.dropdown-account {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 260px;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  display: none;
+  flex-direction: column; /* This stacks your divs/links vertically */
+  z-index: 100;
+}
+
+/* Make the links look like the screenshot */
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 0;
+  text-decoration: none;
+  color: #333;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+
+.menu-item:hover {
+  color: #000;
+}
+
+.nav-account:hover .dropdown-account {
+  display: block;
+}
+.auth-buttons {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 2px;
+}
+.nav-bottom2{
+  display: flex;
+  align-items: center ;
+  background-color: white;
+  position:relative;
+  gap:15px;
+  
+  
+}
+/* Parent nav-new must be relative */
+.nav-new {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+/* Mega dropdown */
+.dropdown-nega {
+  position: absolute;
+  top: 100%;      /* directly below the NEW IN link */
+  left: 0;
+  width: 90vw;    /* spans most of the screen */
+  width: 1200px;
+  background: white;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  height: auto; 
+                   /* for 4-column layout */
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1.5fr; /* 4 columns + 1 for image */
+  gap: 10px;
+
+  z-index: 100;
+  display: none; /* hide by default */
+}
+
+/* Show on hover */
+.nav-new:hover .dropdown-nega {
+  display: grid; 
+}
+.dropdown-Lega {
+  position: absolute;
+  top: 100%;      /* directly below the NEW IN link */
+  left: 50%;
+  transform: translateX(-20%);
+  width: 100vw;    /* spans most of the screen */
+
+  background: white;
+  padding: 40px  100px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+ 
+                   /* for 4-column layout */
+  grid-template-columns: 1fr 1fr 1fr 1.5fr; /* 4 columns + 1 for image */
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the image and text */
+  text-align: center;
+
+  z-index: 100;
+  display: none; /* hide by default */
+}
+
+/* Show on hover */
+.nav-new:hover .dropdown-Lega {
+  display: grid; 
+}
+
+/* Column titles */
+.column-title {
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-style: bold;
+}
+
+/* Mega links */
+.mega-link {
+  display: block;
+  padding: 8px 0;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+/* Mega image */
+.mega-image img {
+  width: 80%;
+  height: 200px;
+  border-radius: 4px;
+}
+.dropdown-mega {
+  position: absolute;
+  top: 100%;      /* directly below the NEW IN link */
+  left: 0;
+  width: 90vw;    /* spans most of the screen */
+  width: 1200px;
+  background: white;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  height: auto; 
+                   /* for 4-column layout */
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* 4 columns + 1 for image */
+  gap: 10px;
+
+  z-index: 100;
+  display: none; /* hide by default */
+}
+.nav-new:hover .dropdown-mega {
+  display: grid; 
+}
+.dropdown-Lega > div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the image and text */
+  text-align: center;
+}
+
+.dropdown-Lega img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px; /* Space between image and the text under it */
+}
+.content{
+  background-color: Red;
+  color:white;
+
+}
+.content1-container{
+  background-color: white ;
+  color:red ;
+  text-align: left;
+    padding: 25px 50px 75px 100px;
+  display: flex;
+  align-items: center;
+ 
+  gap:40px;
+
+}
+.content1{
+  flex:1;
+}
+.content1 h5{
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.content1 h1{
+  font-size: 60px;
+  font-weight: 800;
+  font-style: bold;
+} 
+.content1 .everything{
+  font-size: 60px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  font-style: bold;
+}
+.shop-btn1{
+  background-color:white;
+  color:red;
+  padding: 10px 20px;
+
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 10px;
+border-color:red
+}
+.content1 p{
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom:20px;
+         /* Centers them vertically */
+}
+.content2{
+  background-color: red ;
+  color:white ;
+  text-align: left;
+  padding: 10px 20px;
+}
+.content2 h5{
+  font-size: 20px;
+  font-weight: 500;
+  text-align:right;
+  
+}
+.sale-image{
+  width: 50%;
+  height: 500px;
+  align-items: right;
+  
+}
+.content1-image {
+  flex: 1.3;
+}
+
+.content1-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.promo-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+
+  padding: 60px;
+  background-color: white;
+}
+.promo-card {
+  height: 320px;
+
+  background: linear-gradient(
+    to bottom,
+    #2f4e9f,
+    #5f78b8,
+    #e6e8ee
+  );
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  text-align: center;
+
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.promo-card h1{
+  font-size: bold;
+  font-size: 50px;
+}
